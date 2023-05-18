@@ -1,0 +1,59 @@
+﻿@model RestarRapsodya.Models.Pedido
+@{
+    ViewData["Title"] = "Informacion del Pedido";
+}
+@section menu_navegacion{
+}
+<section>
+    <div class="container-fluid pt-5">
+        <div class="row d-flex justify-content-around">
+            <div class="col-8 crearCustom pb-3 pt-2 text-white ">
+                <h1 class="text-center pt-2">Informacion del Pedido</h1>
+                <hr />
+                <div>
+                    <dl class="row ps-5 ms-5 d-flex ">
+                        <dt class="col-sm-5 mb-3 h5 text-lightGreen">
+                            #PEDIDO
+                        </dt>
+                        <dd class="col-sm-7 mb-3 h5">
+                            @Html.DisplayFor(model => model.id_Pedido)
+                        </dd>
+                        <dt class="col-sm-5 mb-3 h5 text-lightGreen">
+                            Fecha del pedido:
+                        </dt>
+                        <dd class="col-sm-7 mb-3 h5">
+                            @Html.DisplayFor(model => model.fecha_Pedido)
+                        </dd>
+                        <dt class="col-sm-5 mb-3 h5 text-lightGreen">
+                            Producto Pedido:
+                        </dt>
+                        <dd class="col-sm-7 mb-3 h5">
+                            @Html.DisplayFor(model => model.Nombre_Plato)
+                        </dd>
+                        <dt class="col-sm-5 mb-3 h5 text-lightGreen">
+                            Cantidad de Unidades Pedidas:
+                        </dt>
+                        <dd class="col-sm-7 mb-3 h5">
+                            @Html.DisplayFor(model => model.Cantidad)
+                        </dd>
+                        <dt class="col-sm-5 mb-3 h5 text-lightGreen">
+                            Cliente que realizo la orden:
+                        </dt>
+                        <dd class="col-sm-7 mb-3 h5 ">
+                            @Html.DisplayFor(model => model.Usuario.Nombre)
+                        </dd>
+                        <dt class="col-sm-5 mb-3 h5 text-lightGreen">
+                            Mesa donde se llevara el pedido
+                        </dt>
+                        <dd class="col-sm-7 mb-3 h5">
+                            @Html.DisplayFor(model => model.id_Mesa)
+                        </dd>
+                    </dl>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a class="btnCard p-3 me-5" asp-action="DescargarPDF" asp-route-id_pedido="@Model.id_Pedido" asp-route-pedidoUrl="@ViewBag.pedidoUrl">Descargar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

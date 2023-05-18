@@ -1,0 +1,60 @@
+﻿@model IEnumerable<RestarRapsodya.Models.Mesa>
+
+@{
+    ViewData["Title"] = "Gestion de Mesas";
+}
+@section menu_navegacion{
+        <ul class="navbar-nav d-flex m-0 w-100">
+            <li class="me-3 d-flex align-items-center">
+                <a class="p-2 btnCard" asp-area="" asp-controller="Usuario" asp-action="principalAdmin">Menu</a>
+            </li>
+            <li class="me-3 d-flex align-items-center">
+                <a class="btnCard p-2" asp-area="" asp-controller="Usuario" asp-action="CerrarSesion">Cerrar Sesion</a>
+            </li>
+        </ul>
+}
+<section>
+    <div class="container-fluid pt-5">
+        <div class="row d-flex justify-content-around">
+            <div class="col-12 crearCustom pb-3 pt-2 text-white ">
+                <h1 class="text-center pt-2">Gestion de Mesas</h1>
+                <hr/>
+                <table class="table customTable col-12">
+                    <thead class="bg-verde-2 text-white">
+                        <tr>
+                            <th class="pb-3 pt-3">
+                                @Html.DisplayNameFor(model => model.Capacidad)
+                            </th>
+                            <th class="pb-3 pt-3">
+                                @Html.DisplayNameFor(model => model.Estado)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="pb-3 pt-3">
+                                    @Html.DisplayFor(modelItem => item.Capacidad)
+                                </td>
+                                <td class="pb-3 pt-3">
+                                    @Html.DisplayFor(modelItem => item.Estado.estado)
+                                </td>
+                                <td class="pb-3 pt-3">
+                                    <a class="btnEditar" asp-action="Editar" asp-route-id="@item.id_Mesa">Editar</a> |
+                                    <a class="btnDetalles" asp-action="Detalles" asp-route-id="@item.id_Mesa">Detalles</a> |
+                                    <a class="btnEliminar" asp-action="Eliminar" asp-route-id="@item.id_Mesa">Eliminar</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

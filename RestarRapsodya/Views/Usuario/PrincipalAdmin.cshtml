@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Principal Administrador";
+}
+@section menu_navegacion{
+    <ul class="navbar-nav d-flex m-0 w-100">
+        <li class="me-3 d-flex align-items-center">
+            <a class="btnCard p-2" asp-area="" asp-controller="Usuario" asp-action="CerrarSesion">Cerrar Sesion</a>
+        </li>
+    </ul>
+}
+<section>
+    <div class="container-fluid pt-5">
+        <div class="row d-flex justify-content-around">
+            @if(ViewBag.Agregado == true)
+            {
+                <h5 class="bg-light p-2 text-success text-center rounded-3">Agregado Correctamente</h5>
+            }
+            <div class="card mb-3 pb-3 p-0 col-lg-5 col-md-5 col-sm-12 customCard">
+                <img src="~/Imagenes/imgAdminLogIn.jpg" class="card-img-top img-fluid" alt="Imagen gestion Administradores">
+                <div class="card-body pt-3 d-flex align-items-center justify-content-center">
+                    <h3 class="card-title text-center">Gestionar Usuario</h3>
+                </div>
+                <div class="card-footer p-2 d-flex justify-content-center">
+                    <a class="mt-2 me-2 btnCard fs-5 fw-bold" asp-controller="Usuario" asp-action="Crear">Crear</a>
+                    <a class="mt-2 btnCard fs-5 fw-bold" asp-controller="Usuario" asp-action="Consultar">Consultar</a>
+                </div>
+            </div>
+            <div class="card mb-3 p-0 pb-3 col-lg-5 col-md-5 col-sm-12 customCard">
+                <img src="~/Imagenes/imgAdminLogIn.jpg" class="card-img-top img-fluid" alt="Imagen gestion Mesas">
+                <div class="card-body pt-3 d-flex align-items-center justify-content-center">
+                    <h3 class="card-title text-center">Gestionar Mesas</h3>
+                </div>
+                <div class="card-footer p-2 d-flex justify-content-center">
+                    <a class="mt-2 me-2 btnCard fs-5 fw-bold" asp-controller="Mesa" asp-action="Crear">Crear</a>
+                    <a class="mt-2 btnCard fs-5 fw-bold" asp-controller="Mesa" asp-action="Consultar">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

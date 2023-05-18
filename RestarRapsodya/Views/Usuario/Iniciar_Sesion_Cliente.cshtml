@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "LogIn Cliente";
+}
+@section menu_navegacion{
+}
+<section>
+    <div class="container-fluid pt-3">
+        <div class="row d-flex justify-content-center">
+            <div class="card mb-3 p-0 col-lg-8 col-md-12 customCard">
+                <img src="~/Imagenes/imgClienteLogIn.jpg" class="card-img-top img-fluid" alt="Imagen LogIn Administradores">
+                <div class="card-header pt-3">
+                    @if (ViewBag.Agregado == true)
+                    {
+                        <h5 class="bg-light p-2 text-success text-center rounded-3">Registrado Correctamente</h5>
+                    }
+                    <h3 class="card-title text-center">Inicio de sesion como Cliente</h3>
+                </div>
+                <div class="card-body p-1 d-flex justify-content-start">
+                    <form asp-controller="Usuario" asp-action="IniciarSesion" method="post" class="w-100 me-lg-5 pe-5 text-center">
+                        <div class="campoFormulario">
+                            <label for="correo" class="control-label m-3 fs-5">Correo: </label>
+                            <input type="email" id="correo" name="correo" class="form-control w-50 m-3" required />
+                        </div>
+                        <button type="submit" class="p-2 mb-2 fs-5 ms-5 btnCard bg-verde-1 w-25">Ingresar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

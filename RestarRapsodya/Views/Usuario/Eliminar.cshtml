@@ -1,0 +1,61 @@
+﻿@model RestarRapsodya.Models.Usuario
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+@section menu_navegacion{
+    <ul class="navbar-nav d-flex m-0 w-100">
+        <li class="me-3 d-flex align-items-center">
+            <a class="p-2 btnCard" asp-area="" asp-controller="Usuario" asp-action="principalAdmin">Menu</a>
+        </li>
+        <li class="me-3 d-flex align-items-center">
+            <a class="btnCard p-2" asp-area="" asp-controller="Usuario" asp-action="CerrarSesion">Cerrar Sesion</a>
+        </li>
+    </ul>
+}
+<section>
+    <div class="container-fluid pt-5">
+        <div class="row d-flex justify-content-around">
+            <div class="col-8 crearCustom pb-3 pt-2 text-white">
+                <h1 class="text-center pt-2">Eliminar</h1>
+                <hr />
+                <h3 class="text-center">Esta seguro de que quiere eliminar este usuario?</h3>
+                <div>
+                    <hr />
+                    <dl class="row ms-2 ps-5">
+                        <dt class="col-sm-2 mb-3 h5 text-lightGreen">
+                            @Html.DisplayNameFor(model => model.Correo)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Correo)
+                        </dd>
+                        <dt class="col-sm-2 mb-3 h5 text-lightGreen">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                        <dt class="col-sm-2 mb-3 h5 text-lightGreen">
+                            @Html.DisplayNameFor(model => model.id_Rol)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Rol.nombre_Rol)
+                        </dd>
+                        <dt class="col-sm-2 mb-3 h5 text-lightGreen">
+                            @Html.DisplayNameFor(model => model.Telefono)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Telefono)
+                        </dd>
+                    </dl>
+                    <form asp-action="Eliminar" class="d-flex justify-content-center">
+                        <input type="hidden" asp-for="Correo"/>
+                        <input type="submit" value="Eliminar" class="btnCard bg-verde-1 me-4" /> 
+                        <a class="btnCard" asp-action="Consultar">Volver a la Gestion</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,51 @@
+﻿@model RestarRapsodya.Models.Mesa
+
+@{
+    ViewData["Title"] = "Editar Mesa";
+}
+@section menu_navegacion{
+    <ul class="navbar-nav d-flex m-0 w-100">
+        <li class="me-3 d-flex align-items-center">
+            <a class="p-2 btnCard" asp-area="" asp-controller="Usuario" asp-action="principalAdmin">Menu</a>
+        </li>
+        <li class="me-3 d-flex align-items-center">
+            <a class="btnCard p-2" asp-area="" asp-controller="Home" asp-action="Privacy">Cerrar Sesion</a>
+        </li>
+    </ul>
+}
+
+    <div class="container-fluid pt-5">
+        <div class="row d-flex justify-content-around">
+            <div class="col-lg-6 col-md-8 col-12 crearCustom pb-3 pt-2 text-white ">
+                <h1 class="text-center pt-2">Editar Mesa</h1>
+                <hr />
+                <form asp-action="Editar" class="p-5 pb-4 pt-2">
+                    <div asp-validation-summary="ModelOnly" class="text-warning"></div>
+                    <input type="hidden" asp-for="id_Mesa" />
+                    <div class="form-group">
+                        <label asp-for="Capacidad" class="control-label"></label>
+                        <input asp-for="Capacidad" class="form-control" />
+                        <span asp-validation-for="Capacidad" class="text-warning"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="id_Estado" class="control-label"></label>
+                        <select asp-for="id_Estado" class="form-control col-4" asp-items="ViewBag.Estados"></select>
+                        <span asp-validation-for="id_Estado" class="text-warning"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btnCard bg-verde-1 p-3 mt-3" />
+                    </div>
+                </form>
+                <div class="mb-4 ms-5">
+                    <a class="btnCard bg-verde-1 p-3 mt-3" asp-action="Consultar">Volver a la Gestion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

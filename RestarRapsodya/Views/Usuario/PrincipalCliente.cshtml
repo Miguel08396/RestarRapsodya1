@@ -1,0 +1,380 @@
+﻿@model RestarRapsodya.Models.Pedido
+@{
+    ViewData["Title"] = "Principal Cliente";
+}
+@section menu_navegacion{
+    <ul class="navbar-nav d-flex m-0 w-50">
+        <li class="me-3 d-flex align-items-center">
+            <a class="btnCard p-2" href="#Pedido">Realizar Pedido</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav d-flex m-0 w-50">
+        <li class="me-3 d-flex align-items-center">
+            <a class="btnCard p-2" asp-area="" asp-controller="Usuario" asp-action="CerrarSesion">Cerrar Sesion</a>
+        </li>
+    </ul>
+}
+@if (ViewBag.Agregado == true)
+{
+    <h5 class="bg-light w-100 mt-5 p-2 text-success text-center rounded-3">Registrado Correctamente</h5>
+}
+<section class="main">
+    <section class="lista">
+        <section class="contenido">
+            <h2 id="tituloLista"> Lista </h2>
+            <div class="listaMain">
+                <div class="listaMain2">
+                    <div class="fila">
+                        <h4>Desayunos</h4>
+                        <div class="elemento">
+                            <h6 class="nombre">Combo 1</h6>
+                            <h6 class="precio">$10,000</h6>
+                            <p>
+                                Caldo de Vegetales/pollo
+                                Costilla, Huevos al gusto,
+                                Bebida.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Combo 2</h6>
+                            <h6 class="precio fs-6">$8,500</h6>
+                            <p>
+                                Pancakes de zanahoria y
+                                banano, huevos y bebidas.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Combo 3</h6>
+                            <h6 class="precio">$8,500</h6>
+                            <p>
+                                Omelette vegetales, caldo de
+                                costilla, pollo y vegetales,
+                                bebida.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Combo 4</h6>
+                            <h6 class="precio">$ 10,000</h6>
+                            <p>
+                                Parfait alquimia, Fruta fresca,
+                                Granola y yogurgriegoo
+                                yogurtnatural.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Combo 5</h6>
+                            <h6 class="precio">$10,500</h6>
+                            <p>
+                                Huevos del chef, fruta
+                                fresca , bebida.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <h4>Entradas</h4>
+                        <div class="elemento">
+                            <h6 class="nombre">Canasticas depatacón</h6>
+                            <h6 class="precio">$13,000</h6>
+                            <p>
+                                Hogado x4 und, Acompañado
+                                de guacamole.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Empanaditas</h6>
+                            <h6 class="precio">$15,000</h6>
+                            <p>Queso y Albaca x5 und.</p>
+                        </div>
+                        <h4>Bebidas Calientes</h4>
+                        <div class="elemento">
+                            <p>
+                                • Te <br />
+                                • Milo <br />
+                                • Late <br />
+                                • Capuchino <br />
+                                • Expreso <br />
+                                • Chocolate <br />
+                                • Tinto campesino <br />
+                                • Tinto Americano <br />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <h4>Gourmet</h4>
+                        <div class="elemento">
+                            <h6 class="nombre">Wok de pollo y vegetales</h6>
+                            <h6 class="precio">$15,000</h6>
+                            <p>
+                                Deliciosa mezcla de pechuga
+                                grillet y cebolla cabezona,
+                                pimentón, apio, zanahoria,
+                                brócoli, quinua, salsa soya y
+                                mostaza.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Pollo primavera</h6>
+                            <h6 class="precio fs-6">$15,500</h6>
+                            <p>
+                                • Pechuga de pollo marinada con
+                                finas hierbas, rellena de tocineta,
+                                quesopaipa, espinacas.<br />
+                                • Acompañado de pure de papa al
+                                curry,ensalada de la casa.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Pasta Alquimia</h6>
+                            <h6 class="precio">$18,000</h6>
+                            <p>
+                                Tornillos con una deliciosa mezcla
+                                de pollo parrillado, camarones,
+                                espinacas, maíz tierno,
+                                champiñones, queso parmesano,
+                                bañado en salsa Alfredo.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Trucha al ajillo en salsa marinera</h6>
+                            <h6 class="precio">$ 22,000</h6>
+                            <p>
+                                Una explosión de sabores de
+                                mar. Acompañadas de tostón de
+                                yuca y ensalada de la casa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <h4>Gourmet</h4>
+                        <div class="elemento">
+                            <h6 class="nombre">Salmon en chutney de mango</h6>
+                            <h6 class="precio">$25,000</h6>
+                            <p>
+                                • Filete de salmón bañado en una
+                                suave salsa de mango o de
+                                maracuyá.<br />
+                                • Acompañadode puredepapay
+                                ensaladadela casa.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Churrasco Mexicano</h6>
+                            <h6 class="precio">$18,000</h6>
+                            <p>
+                                250 grconunsalteadodevegetales
+                                cono sinpicante,acompañadode
+                                papaargentinay ensaladade la
+                                casa.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Encocado de frutos del mar</h6>
+                            <h6 class="precio fs-6">$30,000</h6>
+                            <p>
+                                • Espectacular mezcla de frutos del
+                                mar, con una base crocante de yuca.<br />
+                                • Acompañadode perlasdeaguacatey
+                                arrozblanco.
+                            </p>
+                        </div>
+                        <h4>Ensaladas</h4>
+                        <div class="elemento">
+                            <p>
+                                • Cesar<br />
+                                • Mediterránea<br />
+                                • Mexicana<br /><br />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <h4>Comidas Rapidas</h4>
+                        <div class="elemento">
+                            <h6 class="nombre">Hamburguesa de la casa</h6>
+                            <h6 class="precio">$15,000</h6>
+                            <p>
+                                Carne de res 160 gr, queso
+                                mozarela, tocineta, frijol refrito,
+                                chorizo, maíz dulce, cebolla
+                                caramelizada, aguacate, lechuga,
+                                tomate y pan.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">-Hamburguesa de la casa</h6>
+                            <h6 class="precio fs-6">$13,000</h6>
+                            <p>
+                                Pechuga a grille 200 gr, mozarela,
+                                tocineta, frijol refrito, chorizo, maíz
+                                dulce, cebolla caramelizada,
+                                aguacate, lechuga, tomate y pan.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Costillas de cerdo en salsa de ciruelas</h6>
+                            <h6 class="precio">$20,000</h6>
+                            <p>
+                                350 gr de costillas acompañadas de
+                                papa francesa y tortilla de queso y
+                                guacamole de la casa.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Alitas en salsa búfalo</h6>
+                            <h6 class="precio">$ 18,000</h6>
+                            <p>
+                                En salsa búfalo o tradicionales,
+                                acompañadas con papa a la
+                                francesa, guacamole y ensalada de
+                                la casa.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <h4>Para compartir</h4>
+                        <div class="elemento">
+                            <h6 class="nombre">Tabla mixta</h6>
+                            <h6 class="precio">$45,000</h6>
+                            <p>
+                                Churrasco, costillas de cerdo, alitas,
+                                chorizo, pechuga a la plancha,
+                                patacón, croquetas de yuca y papa
+                                criolla.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Sopas</h6>
+                            <p>
+                                • Sopa de tortilla<br />
+                                • Ajiaquillo
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Combo Alquimito</h6>
+                            <h6 class="precio">$15,000</h6>
+                            <p>
+                                Fajitas de pollo o res a la parrilla,
+                                acompañadas de papas a la
+                                francesa, ensalada dulce y copa de
+                                helado.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <h4>Licores</h4>
+                        <div class="elemento">
+                            <h6 class="nombre">Gassata de frutos verdes</h6>
+                            <h6 class="precio">$8,500</h6>
+                            <p>
+                                Kiwi, lulo, soda, vodka, hielo picado
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Gassata de frutos del bosque</h6>
+                            <h6 class="precio">$8,500</h6>
+                            <p>
+                                Uchuvas, maracuyá, hierbabuena,
+                                soda, vodka, hielo picado.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Gassata de frutos Rojos</h6>
+                            <h6 class="precio fs-6">$8,500</h6>
+                            <p>
+                                Fresas, Cerezas, soda, vodka, hielo
+                                picado.
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Copa de vino</h6>
+                            <h6 class="precio fs-6">$15,000</h6>
+                            <p>
+                                Vino tinto, Cabernet , Sauvignon, Gato
+                                negro
+                            </p>
+                        </div>
+                        <br />
+                        <div class="elemento">
+                            <h6 class="nombre">Shot de tequila</h6>
+                            <h6 class="precio fs-6">$4,000</h6>
+                            <br /><br />
+                        </div>
+                        <br />
+                        <div class="elemento">
+                            <h6 class="nombre">Shot de Aguardiente</h6>
+                            <h6 class="precio fs-6">$4,000</h6>
+                            <br /><br />
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <h4>Jugos</h4>
+                        <div class="elemento">
+                            <h6 class="nombre">En agua</h6>
+                            <h6 class="precio">$3,500</h6>
+                            <p>
+                                • Mango<br />
+                                • Fresa<br />
+                                • Mora<br />
+                                • Naranjada<br />
+                                • Limonada<br />
+                                • Lulo<br />
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">En leche</h6>
+                            <h6 class="precio">$4,000</h6>
+                            <p>
+                                • Guayaba<br />
+                                • Fresa<br />
+                                • Mora<br />
+                                • Freijoa<br />
+                                • Guanabana<br />
+                                • Naranja<br />
+                            </p>
+                        </div>
+                        <div class="elemento">
+                            <h6 class="nombre">Limonadas especiales</h6>
+                            <h6 class="precio fs-6">$8,500</h6>
+                            <p>
+                                • Coco<br />
+                                • Cereza <br />
+                                • Frutos Tropicales <br />
+                                • Menta <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>
+<section>
+    <div class="container-fluid pt-5 pb-5" id="Pedido">
+        <div class="row d-flex justify-content-around">
+            <div class="col-lg-6 col-md-8 col-12 crearCustom pb-3 pt-2 text-white ">
+                <h1 class="text-center pt-2">Hacer Pedido</h1>
+                <hr />
+                <form asp-action="HacerPedido" class="pe-5 ps-5">
+                    <div asp-validation-summary="ModelOnly" class="text-warning"></div>
+                    <div class="form-group pb-2">
+                        <label asp-for="Nombre_Plato" class="control-label fs-5">Nombre del Plato: </label>
+                        <input asp-for="Nombre_Plato" class="form-control" />
+                        <span asp-validation-for="Nombre_Plato" class="text-warning"></span>
+                    </div>
+                    <div class="form-group pb-2">
+                        <label asp-for="Cantidad" class="control-label fs-5">Cantidad</label>
+                        <input asp-for="Cantidad" type="number" min="1" class="form-control" />
+                        <span asp-validation-for="Cantidad" class="text-warning"></span>
+                    </div>
+                    <div class="form-group pb-2">
+                        <label asp-for="id_Mesa" class="control-label fs-5">Mesa</label>
+                        <select asp-for="id_Mesa" class="form-control col-4" asp-items="ViewBag.Mesas"></select>
+                        <span asp-validation-for="id_Mesa" class="text-warning"></span>
+                    </div>
+                    <div class="form-group d-flex justify-content-center">
+                        <input type="submit" value="Hacer Pedido" class="mt-4 btnCard bg-verde-1 fs-5 fw-bold" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

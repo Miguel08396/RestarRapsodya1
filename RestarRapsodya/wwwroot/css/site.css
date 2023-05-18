@@ -1,0 +1,198 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background:url(../Imagenes/foodPattern.jpg) top left repeat;
+}
+
+.bg-verde-1 {
+    background: #185e23;
+}
+
+.customCard {
+    background: #185e23;
+    border: 2px solid #fff;
+    color: #ffffff;
+}
+.btnCard{
+    padding: 2%;
+    border: 1px solid #fff;
+    cursor:pointer;
+    color:antiquewhite;
+    border-radius:5px;
+    text-decoration:none;
+    text-align:center;
+    transition: transform 0.2s;
+}
+
+    .btnCard:hover {
+        color: #4bd260;
+        border-color: #4bd260;
+        transform: scale(1.02);
+    }
+
+.campoFormulario{
+    display:flex;
+    justify-content:end;
+}
+
+.crearCustom {
+    background: #185e23;
+    border: 2px dashed #fff;
+    border-radius:5px;
+}
+.customTable {
+    background: #a8a4a4;
+    border: 2px solid #093810;
+    color: #2b2929;
+}
+
+.bg-verde-2 {
+    background: #093810;
+}
+
+.btnEditar {
+    padding: 2% 5%;
+    border: 1px solid #fff;
+    background: #1b74b7;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btnEditar:hover {
+    color: #ff6a00;
+    border-color: #ff6a00;
+}
+
+.btnDetalles {
+    padding: 2% 5%;
+    border: 1px solid #fff;
+    background: #1b74b7;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+    .btnDetalles:hover {
+        color: #0c3655;
+        border-color: #0c3655;
+    }
+
+.btnEliminar {
+    padding: 2% 5%;
+    border: 1px solid #fff;
+    background: #1b74b7;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+    .btnEliminar:hover {
+        color: #7b0e0e;
+        border-color: #7b0e0e;
+    }
+
+.text-lightGreen{
+    color:lightgreen;
+    font-weight:700;
+}
+
+.contenido {
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.main {
+    background: url(../Imagenes/leaves.webp);
+    background-repeat: repeat;
+    margin: 0%;
+    padding-bottom: 5%;
+}
+.lista {
+    padding-top: 3%;
+    text-align: center;
+}
+
+    .lista h2 {
+        font-size: 2rem;
+        color: #4a4a4a;
+        font-weight: 500;
+    }
+
+    .lista .listaMain {
+        width: 85%;
+        margin: auto;
+        border: 2px solid black;
+        padding: 0.5%;
+    }
+
+        .lista .listaMain .listaMain2 {
+            width: 100%;
+            border: 2px black solid;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+            .lista .listaMain .listaMain2 .fila {
+                width: 45%;
+                margin-bottom: 1%;
+            }
+
+                .lista .listaMain .listaMain2 .fila h4 {
+                    font-size: 1.3rem;
+                }
+
+                .lista .listaMain .listaMain2 .fila .elemento {
+                    text-align: left;
+                    padding: 3% 0;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    border-bottom: 3px black dotted;
+                    margin-bottom: 3%;
+                }
+
+                    .lista .listaMain .listaMain2 .fila .elemento .nombre {
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        width: 70%;
+                        margin: 0%;
+                    }
+
+                    .lista .listaMain .listaMain2 .fila .elemento .precio {
+                        font-weight:700;
+                        width: 20%;
+                        margin: 0%;
+                        text-align: right;
+                    }
+
+                    .lista .listaMain .listaMain2 .fila .elemento p {
+                        margin: 1% 0;
+                        width: 100%;
+                    }

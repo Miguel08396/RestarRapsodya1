@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Principal";
+}
+@section menu_navegacion{}
+<section>
+    <div class="container-fluid pt-5">
+        <div class="row d-flex justify-content-around">
+            <div class="card mb-3 p-0 col-5 customCard">
+                <img src="~/Imagenes/imgAdminLogIn.jpg" class="card-img-top img-fluid" alt="Imagen LogIn Administradores">
+                <div class="card-body pt-3">
+                    <h3 class="card-title text-center">Eres un Administrador?</h3>
+                </div>
+                <div class="card-footer p-2 d-flex justify-content-center">
+                    <a class="mt-2 btnCard fs-5 fw-bold" asp-controller="Usuario" asp-action="Iniciar_Sesion"> Iniciar Sesion </a>
+                </div>
+            </div>
+            <div class="card mb-3 p-0 col-5 customCard">
+                <img src="~/Imagenes/imgClienteLogIn.jpg" class="card-img-top" alt="Imagen logIn clientes">
+                <div class="card-body pt-3">
+                    <h3 class="card-title text-center">Eres un Cliente?</h3>
+                </div>
+                <div class="card-footer p-2 d-flex justify-content-center">
+                    <a class="m-2 btnCard fs-5 fw-bold" asp-controller="Usuario" asp-action="Registro"> Registrarse </a>
+                    <a class="m-2 btnCard fs-5 fw-bold" asp-controller="Usuario" asp-action="Iniciar_Sesion_Cliente"> Ingresar </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
